@@ -1,0 +1,35 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block content %}
+
+<main role="main">
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 25rem;">
+                        <img class="card-img-top" src="{{ urlImg }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ termo }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ expressao }}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ area }}</h6>
+                            <p class="card-text">{{ definicao }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

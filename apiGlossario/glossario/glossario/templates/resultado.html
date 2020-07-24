@@ -1,0 +1,38 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block content %}
+
+<main role="main">
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            {% for term in termos %}
+            <div class="row">
+                <div class="col-md-4">
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 25rem; margin-bottom: 20px;">
+                        <img class="card-img-top" src="{{ term.urlImg }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ term.termo }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ term.expressao }}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ term.area }}</h6>
+                            <p class="card-text">{{ term.definicao }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+
+            </div>
+            
+            {% endfor %}
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}
